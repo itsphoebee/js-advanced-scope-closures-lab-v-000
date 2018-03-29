@@ -1,6 +1,6 @@
 function produceDrivingRange(range){
   return function(startingLocation, endingLocation){
-    if (Math.abs(endingLocation - startingLocation) <= range){
+    if (Math.abs(parseInt(endingLocation) - parseInt(startingLocation)) <= range){
       return `within range by ${endingLocation - startingLocation}`
     }
   }
