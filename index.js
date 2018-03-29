@@ -1,7 +1,7 @@
 function produceDrivingRange(range){
   return function(startingLocation, endingLocation){
-    if (endingLocation - startingLocation <= range){
-      return true
+    if (Math.abs(endingLocation - startingLocation) <= range){
+      return `within range by ${endingLocation - startingLocation}`
     }
   }
 }
