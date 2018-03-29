@@ -1,7 +1,10 @@
 function produceDrivingRange(range){
   return function(startingLocation, endingLocation){
-    if (Math.abs(parseInt(endingLocation) - parseInt(startingLocation)) <= range){
-      return `within range by ${parseInt(endingLocation) - parseInt(startingLocation)}`
+    let totalBlocks = Math.abs(parseInt(endingLocation) - parseInt(startingLocation))
+    if (totalBlocks <= range){
+      return `within range by ${totalBlocks - range}`;
+    } else {
+      return `${totalBlocks - range} blocks out of range`;
     }
   }
 }
